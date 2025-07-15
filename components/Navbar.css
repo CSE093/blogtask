@@ -4,7 +4,7 @@
   align-items: center;
   padding: 16px 40px;
   border-bottom: 2px solid #eee;
-  background: linear-gradient(to right, grey,black);
+  background: linear-gradient(to right, orangered, black);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   position: sticky;
   top: 0;
@@ -12,9 +12,9 @@
 }
 
 .logo {
-  font-size: 26px;
+  font-size: 50px;
   font-weight: bold;
-  color: orangered;
+  color: black;
   font-family: 'Segoe UI', sans-serif;
 }
 
@@ -22,15 +22,25 @@
   display: flex;
   list-style: none;
   gap: 32px;
-  font-size: 17px;
+  font-size: 30px;
   font-weight: 500;
 }
 
 .nav-links li {
   position: relative;
-  color: gold;
   cursor: pointer;
   transition: color 0.3s ease;
+}
+
+
+.nav-links li {
+  color: white;
+}
+
+
+.nav-links li:nth-child(1),
+.nav-links li:nth-child(2) {
+  color: silver;
 }
 
 .nav-links li::after {
@@ -40,7 +50,7 @@
   left: 0;
   height: 2px;
   width: 0%;
-  background-color: orangered;
+  background-color: palevioletred;
   transition: width 0.3s ease;
 }
 

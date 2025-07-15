@@ -1,3 +1,5 @@
+
+
 export const topRestaurants = [
   { id: 1, name: "White Hart Pizza", image: "/pizza.jpg" },
   { id: 2, name: "Chicago Pizza", image: "/chicago.jpg" },
@@ -9,6 +11,7 @@ export const topRestaurants = [
   { id: 8, name: "Mutton Gravy", image: "/muttongravy.jpg" },
   { id: 9, name: "Gulab Jamun", image: "/gulabjamun.jpg" },
   { id: 10, name: "Paneer Butter Masala", image: "/panner.jpg" },
+   { id: 11, name: "MasalaDosa", image: "/masaladosa.jpg" },
 ];
 
 export const deliveryRestaurants = [
@@ -18,8 +21,8 @@ export const deliveryRestaurants = [
     image: "/chinese.jpg",
     desc: "Chinese, Asian, Tibetan",
     price: "₹210 for two",
-    rating: 4.2,
-    preparationTime: "25 mins",
+    rating: "Rating: 4.2",
+    preparationTime: "Time:25 mins",
   },
   {
     id: 7,
@@ -27,8 +30,8 @@ export const deliveryRestaurants = [
     image: "/meals.jpg",
     desc: "North Indian, Home Food",
     price: "₹250 for two",
-    rating: 4.5,
-    preparationTime: "20 mins",
+    rating: "Rating:4.5",
+    preparationTime: "Time:20 mins",
   },
   {
     id: 8,
@@ -36,8 +39,8 @@ export const deliveryRestaurants = [
     image: "/Bikanervala.jpg",
     desc: "Sweets, South Indian, Snacks",
     price: "₹190 for two",
-    rating: 4.3,
-    preparationTime: "15 mins",
+    rating: "Rating:4.3",
+    preparationTime: "Time:15 mins",
   },
   {
     id: 104,
@@ -45,8 +48,8 @@ export const deliveryRestaurants = [
     image: "/rajma.jpg",
     desc: "Kidney beans curry served with steamed rice",
     price: "₹130",
-    rating: 4.0,
-    preparationTime: "30 mins",
+    rating: "Rating:4.0",
+    preparationTime: "Time:30 mins",
   },
   {
     id: 105,
@@ -54,8 +57,8 @@ export const deliveryRestaurants = [
     image: "/butternaan.jpg",
     desc: "Soft Indian flatbread topped with butter",
     price: "₹40",
-    rating: 4.6,
-    preparationTime: "10 mins",
+    rating: "Rating: 4.6",
+    preparationTime: "Time:10 mins",
   },
   {
     id: 106,
@@ -63,7 +66,8 @@ export const deliveryRestaurants = [
     image: "/chickentikka.jpg",
     desc: "Smoky grilled chicken chunks marinated in spices",
     price: "₹200",
-    rating: 4.7,
-    preparationTime: "35 mins",
+    rating: "Rating:4.7",
+    preparationTime: "Time:35 mins",
   },
+  
 ];
