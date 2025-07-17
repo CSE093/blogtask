@@ -1,4 +1,4 @@
-# 🍽️ Food Ordering App (Next.js)
+#  Food Ordering App (Next.js)
 
 This is a **Next.js** project built for a food ordering platform.  
 It includes features for both **users** and **admins** to manage restaurant listings.
@@ -7,20 +7,20 @@ It includes features for both **users** and **admins** to manage restaurant list
 
 ---
 
-## 🚀 Features
+## Features
 
-- 🍕 View top restaurant chains
-- 🛵 Browse delivery options
-- 🧑‍💼 Admin panel for:
-  - ➕ Adding restaurants
-  - 📝 Updating restaurant info
-  - ❌ Deleting restaurants
-- 📦 Restaurant details page
-- 🔐 Login for admin
+-  View top restaurant chains
+-  Browse delivery options
+- Admin panel for:
+  - Adding restaurants
+  -  Updating restaurant info
+  -  Deleting restaurants
+-  Restaurant details page
+- Login for admin
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 - **Frontend**: Next.js (React), CSS
 - **Backend**: Local data or mock API (can integrate Node/Express)
@@ -29,7 +29,7 @@ It includes features for both **users** and **admins** to manage restaurant list
 
 ---
 
-## 💻 Getting Started
+##  Getting Started
 
 To run this project locally:
 
