@@ -11,7 +11,7 @@ export const topRestaurants = [
   { id: 8, name: "Mutton Gravy", image: "/muttongravy.jpg" },
   { id: 9, name: "Gulab Jamun", image: "/gulabjamun.jpg" },
   { id: 10, name: "Paneer Butter Masala", image: "/panner.jpg" },
-   { id: 11, name: "MasalaDosa", image: "/masaladosa.jpg" },
+  { id: 11, name: "MasalaDosa", image: "/masaladosa.jpg" },
 ];
 
 export const deliveryRestaurants = [
