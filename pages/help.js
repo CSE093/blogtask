@@ -40,12 +40,11 @@ export default function HelpPage() {
             lineHeight: '1.6',
           }}
         >
-          Whether you're discovering new dishes, posting your favorite recipes,
-          or following your favorite authors — we're here to make your experience
+          Whether you&apos;re discovering new dishes, posting your favorite recipes,
+          or following your favorite authors — we&apos;re here to make your experience
           smooth and enjoyable.
         </p>
 
-        
         <section style={{ marginBottom: '50px' }}>
           <h2
             style={{
@@ -70,18 +69,17 @@ export default function HelpPage() {
             </p>
             <p>
               <strong>How do I follow a chef or author?</strong><br />
-              Click the author's name below a post, then click “Follow” to stay updated
+              Click the author&apos;s name below a post, then click “Follow” to stay updated
               on their latest work.
             </p>
             <p>
-              <strong>I’m not receiving update emails. What should I do?</strong><br />
+              <strong>I&apos;m not receiving update emails. What should I do?</strong><br />
               Please check your spam folder. You can also visit your account settings
               to manage notification preferences.
             </p>
           </div>
         </section>
 
-       
         <section style={{ marginBottom: '50px' }}>
           <h2
             style={{
@@ -94,7 +92,7 @@ export default function HelpPage() {
             Contact Our Team
           </h2>
           <p style={{ fontSize: '17px', lineHeight: '1.6' }}>
-            We’re here to assist you. For support, partnership inquiries, or feedback, get
+            We&apos;re here to assist you. For support, partnership inquiries, or feedback, get
             in touch via:
           </p>
           <ul style={{ fontSize: '17px', lineHeight: '1.8', marginTop: '10px', paddingLeft: '20px' }}>
@@ -110,7 +108,6 @@ export default function HelpPage() {
           </ul>
         </section>
 
-       
         <section>
           <h2
             style={{
@@ -123,7 +120,7 @@ export default function HelpPage() {
             Feedback & Suggestions
           </h2>
           <p style={{ fontSize: '17px', lineHeight: '1.6' }}>
-            We're always looking to improve. If you have suggestions, feature requests, or any
+            We&apos;re always looking to improve. If you have suggestions, feature requests, or any
             issues, feel free to reach out. Your feedback helps shape the future of this platform.
           </p>
         </section>

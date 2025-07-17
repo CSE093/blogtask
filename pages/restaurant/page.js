@@ -1,7 +1,10 @@
 'use client';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
-import { topRestaurants } from '../../../data/restaurants';
+import { topRestaurants } from '@/data/restaurants';
+
+
+
 
 export default function UpdatePage() {
   const router = useRouter();

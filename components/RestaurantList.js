@@ -1,107 +1,45 @@
-'use client';
-
-import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
-import { deliveryRestaurants, topRestaurants as defaultTop } from '../data/restaurants';
-import './RestaurantList.css';
+import Image from 'next/image';
+import { topRestaurants, deliveryRestaurants } from '../data/restaurants';
 
-const RestaurantList = ({ section }) => {
-  const [topRestaurants, setTopRestaurants] = useState([]);
-  const [isAdmin, setIsAdmin] = useState(false);
-  const router = useRouter();
-
-  useEffect(() => {
-    const stored = localStorage.getItem('topRestaurants');
-    let finalTop = defaultTop;
-
-    if (stored) {
-      const added = JSON.parse(stored);
-      const isDuplicate = (d) =>
-        defaultTop.some((item) => item.name === d.name && item.image === d.image);
-      const newItems = added.filter((d) => !isDuplicate(d));
-      finalTop = [...defaultTop, ...newItems];
-    }
-
-    setTopRestaurants(finalTop);
-    setIsAdmin(localStorage.getItem('isAdmin') === 'true');
-  }, []);
-
-  const handleDelete = (id) => {
-    const updated = topRestaurants.filter((d) => d.id !== id);
-    setTopRestaurants(updated);
-    localStorage.setItem('topRestaurants', JSON.stringify(updated));
-  };
-
-  const handleUpdate = (id) => {
-    router.push(`/update/${id}`);
-  };
-
-  const handleCreate = () => {
-    router.push('/admin');
-  };
-
-  const data = section === 'top' ? topRestaurants : deliveryRestaurants;
+export default function RestaurantList({ section }) {
+  
+  const restaurants = section === 'top' ? topRestaurants : deliveryRestaurants;
 
   return (
-    <div className="card-grid">
-      {data.map((r) => (
-        <div key={r.id} style={{ position: 'relative' }}>
-          <Link href={`/restaurant/${r.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
-            <div className="card">
-              <img src={r.image} alt={r.name} />
-              <h3>{r.name}</h3>
-              {r.desc && <p>{r.desc}</p>}
-              {r.price && <p>{r.price}</p>}
-              {r.rating && <p>{r.rating} | {r.preparationTime}</p>}
+    <section style={{ margin: '40px 0' }}>
+      <h2 style={{ fontSize: '28px', marginBottom: '20px' }}>
+        {section === 'top' ? 'Top Picks' : 'Delivery Favorites'}
+      </h2>
+      <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
+        {restaurants.map((r) => (
+          <Link key={r.id} href={`/restaurant/${r.id}`} passHref>
+            <div
+              style={{
+                width: '300px',
+                border: '1px solid #ccc',
+                borderRadius: '12px',
+                padding: '16px',
+                textDecoration: 'none',
+                backgroundColor: '#fff',
+              }}
+            >
+              <Image
+                src={r.image}
+                alt={r.name}
+                width={300}
+                height={200}
+                style={{ borderRadius: '8px' }}
+              />
+              <h3 style={{ marginTop: '10px' }}>{r.name}</h3>
+              {/* Use r.desc or r.description depending on the data */}
+              <p style={{ fontSize: '14px', color: '#555' }}>
+                {r.desc || r.description || ''}
+              </p>
             </div>
           </Link>
-
-          {isAdmin && section === 'top' && (
-            <div style={{ marginTop: '10px', textAlign: 'center' }}>
-              <button
-                onClick={(e) => {
-                  e.stopPropagation();
-                  handleUpdate(r.id);
-                }}
-                style={buttonStyle}
-              >
-                Update
-              </button>
-              <button
-                onClick={(e) => {
-                  e.stopPropagation();
-                  handleDelete(r.id);
-                }}
-                style={{ ...buttonStyle, backgroundColor: 'crimson' }}
-              >
-                Delete
-              </button>
-              <button
-                onClick={(e) => {
-                  e.stopPropagation();
-                  handleCreate();
-                }}
-                style={{ ...buttonStyle, backgroundColor: 'green' }}
-              >
-                Create
-              </button>
-            </div>
-          )}
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
+    </section>
   );
-};
-
-const buttonStyle = {
-  margin: '5px',
-  padding: '6px 12px',
-  backgroundColor: 'orange',
-  color: 'white',
-  border: 'none',
-  borderRadius: '4px',
-  cursor: 'pointer',
-};
-
-export default RestaurantList;
+}
