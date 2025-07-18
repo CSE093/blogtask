@@ -11,15 +11,15 @@
 
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: var(--background);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--background);
 }
 
 .login-container {
-  width: 400px;
+  max-width: 400px;
   margin: 80px auto;
   padding: 40px;
-  background: #fff;
+  background-color: #fff;
   box-shadow: var(--shadow);
   border-radius: var(--border-radius);
   text-align: center;
@@ -40,7 +40,7 @@ body {
   border-radius: var(--border-radius);
   margin-bottom: 20px;
   outline: none;
-  transition: 0.3s;
+  transition: border-color 0.3s;
 }
 
 .role-select:focus {
@@ -55,7 +55,7 @@ body {
   border: 1px solid var(--input-border);
   border-radius: var(--border-radius);
   outline: none;
-  transition: 0.3s;
+  transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 .input-field:focus {
@@ -68,20 +68,21 @@ body {
   padding: 12px;
   font-size: 1rem;
   font-weight: 500;
-  background: var(--primary-color);
-  color: white;
+  background-color: var(--primary-color);
+  color: #fff;
   border: none;
   border-radius: var(--border-radius);
   cursor: pointer;
-  transition: 0.3s;
+  transition: background-color 0.3s;
 }
 
 .login-button:hover {
-  background: var(--hover-color);
+  background-color: var(--hover-color);
 }
 
 .error-message {
   color: var(--error-color);
   font-size: 0.95rem;
-  margin: 10px 0 20px;
-}
+  margin-top: 10px;
+  margin-bottom: 20px;
+}  

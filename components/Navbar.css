@@ -14,14 +14,14 @@
 .logo {
   font-size: 50px;
   font-weight: bold;
-  font-family: "Segoe UI", sans-serif;
-  color: gold;
+  color: black;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 .nav-links {
   display: flex;
-  gap: 32px;
   list-style: none;
+  gap: 32px;
   font-size: 30px;
   font-weight: 500;
 }
@@ -29,9 +29,14 @@
 .nav-links li {
   position: relative;
   cursor: pointer;
-  color: white;
   transition: color 0.3s ease;
 }
+
+
+.nav-links li {
+  color: white;
+}
+
 
 .nav-links li:nth-child(1),
 .nav-links li:nth-child(2) {
@@ -44,8 +49,8 @@
   bottom: -5px;
   left: 0;
   height: 2px;
-  width: 0;
-  background: palevioletred;
+  width: 0%;
+  background-color: palevioletred;
   transition: width 0.3s ease;
 }
 
